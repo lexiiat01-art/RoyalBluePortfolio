@@ -1,0 +1,214 @@
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== ROOT COLORS ===== */
+:root {
+  --bg-main: #0b1220;
+  --bg-card: #111827;
+  --accent: #3b82f6;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border-soft: #1f2937;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+/* ===== HEADER ===== */
+header {
+  padding: 4rem 1rem 3rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+header h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* ===== SECTIONS ===== */
+section {
+  width: min(92%, 900px);
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: var(--bg-card);
+  border-radius: 14px;
+  border: 1px solid var(--border-soft);
+  text-align: center; /* centered content */
+}
+
+/* Headings */
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+/* Paragraphs */
+section p {
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0.5rem auto;
+}
+
+/* ===== SKILLS ===== */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  margin: 0.3rem;
+  padding: 0.5rem 0.8rem;
+  background-color: rgba(59, 130, 246, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: 0.2s ease;
+}
+
+.skills li:hover {
+  background-color: rgba(59, 130, 246, 0.3);
+  transform: scale(1.05);
+}
+
+/* ===== PROJECTS ===== */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.card {
+  padding: 1.6rem;
+  background-color: #0b1220;
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* ===== MY APPROACH ===== */
+.approach {
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+  text-align: left;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.approach li {
+  margin: 0.7rem 0;
+  padding-left: 1.8rem;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.approach li::before {
+  content: "🔑";
+  position: absolute;
+  left: 0;
+}
+
+/* ===== CONTACT ===== */
+section a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+
+/* ===== FADE-IN ANIMATIONS ===== */
+.pre-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
